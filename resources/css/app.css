@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .inter {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .font-leitura {
+        font-family: LeituraTwo;
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://d3pwy8zpzua7yi.cloudfront.net/fonts/LeituraTwo-Bold.b65a374.woff2) format("woff2")
+    }
+
+    .accordion,.navLanguage {
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        transition: 0.4s;
+    }
+
+    .navLanguage:after,
+    .accordion:after {
+        content: '\25be';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        transition: 0.7s;
+    }
+
+    .active:after {
+        content: "\25be";
+        rotate: 180deg;
+    }
+    .panel2,
+    .panel {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .white-icon {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+      }
+}
